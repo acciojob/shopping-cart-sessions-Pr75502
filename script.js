@@ -84,7 +84,9 @@ function clearCart() {
  sessionStorage.removeItem("cart")
 	 cartList.innerHTML=""
 	renderCart()
-}
+};
+const clearCartBtn = document.querySelector("#clear-cart-btn"); // Ensure the button exists in HTML
+clearCartBtn.addEventListener("click", clearCart);
 
 // Initial render
 renderProducts();
